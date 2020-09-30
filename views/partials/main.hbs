@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <div class="navbar">
+        <a class="name" href="/"><strong>CRAIG DIXON</strong></a>
+        <i id="bars" class="fas fa-bars" onclick="openMenu()"></i>
+    </div>
+    <div id="menu-overlay"></div>
+    <div id="menu-slide" class="menu-slide">
+        <a href="javasript:void(0)" class="menu-x" onclick="closeMenu()">&times;</a>
+        <a href="/work">Work</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
+ </html>
+<script>
+    function openMenu() {
+        var divMenuSlide = document.getElementById("menu-slide");
+        divMenuSlide.style.width = "300px";
+        document.getElementById("menu-overlay").style.width = "100%";
+    }
+    function closeMenu() {
+        document.getElementById("menu-slide").style.width = "0";
+        document.getElementById("menu-overlay").style.width = "0";
+    }
+</script>

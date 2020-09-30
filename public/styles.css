@@ -1,0 +1,239 @@
+@font-face {
+    font-family: fontLight;
+    src: url(fonts/futur.ttf);
+}
+@font-face {
+    font-family: fontBold;
+    src: url(fonts/Futura\ Bold\ font.ttf);
+}
+@font-face {
+    font-family: brandonBold;
+    src: url(fonts/brandon-grotesque-bold-italic-58a8a48221563.otf);
+}
+@font-face {
+    font-family: brandonLight;
+    src: url(fonts/brandon-grotesque-light-italic-58a8a4ccb88be.otf);
+}
+
+body {
+    font-family: fontLight;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+    z-index: 5;
+    background-color: #fff;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,0.2);
+}
+.name {
+    text-decoration: none;
+    font-family: brandonBold;
+    font-size: 26px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.name:hover {
+    color: red
+}
+#bars {
+    color: #7f7d7a;
+    position: absolute;
+    top: 22px;
+    right: 21px;
+    font-size: 20px;
+}
+
+#bars:hover {
+    color: blue;
+}
+.menu-slide {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    transition: 0.5s;
+    padding-top: 60px;
+    overflow-x: hidden;
+}
+
+.menu-slide a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 23px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: brandonLight;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.menu-slide a:hover {
+    color: #f1f1f1;
+}
+
+.menu-slide .menu-x {
+    padding: 0px 0px 0px 20px;
+    margin-top: 0px;
+    position: absolute;
+    top: 0;
+    right: 16px;
+    margin-left: 50px;
+}
+
+#menu-overlay {
+    width: 0;
+    opacity: 0.7;
+    background: #000;
+    height: 100%;
+    z-index: 15;
+    top: 60px;
+    left: 0;
+    position: fixed;
+}
+.home {
+    height: 100vh;
+    width: 80%;
+
+    /* margin: auto; */
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+}
+
+.home-case {
+    width: 450px;
+    height: 360px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home-box {
+    display: inline-block;
+    background-color: #fff;
+    border: 1.4px solid #89dcd9;
+    width: 450px;
+    height: 248px;
+    margin: 0;
+    color: #89dcd9;
+    font-family: brandonLight;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.home-button {
+    text-decoration: none;
+    display: inline-block;
+    font-family: brandonBold;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11.8px;
+    letter-spacing: 3px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    margin: 24px;
+    margin-top: 70px;
+}
+
+.typewriter h1, .typewriter-1 h1, .typewriter-2 h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+
+@keyframes blink-caret {
+    from, to {border-color: transparent}
+    50% {border-color: orange}
+}
+
+.typewriter h1 {
+    margin-top: 55px;
+}
+
+.typewriter-1 h1 {
+    animation-delay: 2s;
+}
+
+.typewriter-2 h1 {
+    animation-delay: 4s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer {
+    color: #333333;
+    background-color: #fff;
+}
+
+.grey-links {
+    background-color: #fafafa;
+    height: 192px;
+    padding-top: 55px;
+    padding-left: 8%;
+}
+
+.linkedin-block {
+    text-align: right;
+    background-color: #fff;
+    margin: auto;
+    height: 63px;
+    text-align: right;
+}
+
+#linkedin-logo {
+    color: #333333;
+    font-size: 20px;
+    padding: 28px;
+    padding-left: 40px;
+}
+
+#linkedin-logo:hover {
+    color: #adeadb;
+}
+
+.pages {
+    text-transform: uppercase;
+    color: #36cdd6;
+    font-family: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    line-height: 18px;
+}
+
+.grey-link {
+    color: #333333;
+    font-family: brandonLight;
+    font-weight: 400px;
+    font-size: 17px;
+    line-height: 36.5px;
+}
+
+.grey-link:hover {
+    color: #89dcd9;
+}
