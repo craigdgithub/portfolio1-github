@@ -16,6 +16,9 @@ app.set("view engine", ".hbs");
 app.get("/", function(req, res) {
     res.render("home.hbs");
 });
+app.get("/contact", function(req, res) {
+    res.render("contact");
+})
 
 
 

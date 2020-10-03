@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        {{> main}}
+        <div class="contact-container">
+            <div class="contact-title"></div>Lets Chat</div>
+                <form class="contact-form" id="contact-form" action="/contact" method="POST">
+                <div class="contact-label">Your Name (required)</div>
+                <input type="text" id="fullname" name="fullname" placeholder="your name..">
+                <div class="contact-label">Your Email (required)</div>
+                <input type="text" id="email" name="email" placeholder="your email..">
+                <div class="contact-label">Subject</div>
+                <input type="text" id="subject" name="subject" placeholder="subject..">
+                <div class="contact-label">Note</div>
+                <text-area rows="5" columns="50" id="note" name="note" placeholder="Your Note.."></text-area>
+                <input type="submit" value="submit" onclick="hide Contact()">
+                </form>
+                <div id="contact-thankyou">Good To Be Intouch!, I Will Get Back To You Shortly!!</div>
+        </div>
+        {{> footer}}
+    </body>
+</html>
