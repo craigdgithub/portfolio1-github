@@ -1,8 +1,11 @@
+
+require('dotenv').config();
 var express = require("express");
 var app = express();
 var exphbs = require("express-handlebars");
 var path = require("path");
-var bodyParser= require("body-parser");
+var bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -24,12 +27,40 @@ app.get("/contact", function(req, res) {
     res.render("contact");
 });
 
-app.post("/contact"), function(req, res, next) {
-    console.log("Contact form posted");
+//step 1 - transporter
+let transporter = nodemailer.createTransport ({
+    service:"gmail",
+    auth: {
+        user: process.env.EMAIL,
+        password: process.env.PASSWORD
+    }
+});
+
+app.post("/contact", function(req, res, next) {
+    console.log("contact form posted");
     console.log("req.body");
-    console.log("req.body.fullname");
-    console.log("req.body.email");
-}
+    var name = req.body.fullname;
+    var email = req.body.email;
+    var note = req.body.note;
+    var subject = req.body.subject;
+    //step 2
+    let mailOptions = {
+        from: "devdixon658@gmail.com",
+        to: "devdixon658@gmail.com",
+        subject: req.body.subject,
+        text: req.body.note,
+        html: "<b>Full Name</b>" + name + "<br><b>Email </b>" + email + "<br><b>Message </b>" + note
+    };
+    //step 3
+    transporter.sendMail(mailOptions, function(err, data) {
+        if(err) {
+            console.log("Error Sending Email.");
+        }else {
+            console.log("Email Sent")
+            res.render("contact", {submitted: "yes"})
+        }
+    });
+});
 
 
 
