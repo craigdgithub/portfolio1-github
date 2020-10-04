@@ -2,6 +2,10 @@ var express = require("express");
 var app = express();
 var exphbs = require("express-handlebars");
 var path = require("path");
+var bodyParser= require("body-parser");
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "/public")));
 
@@ -18,8 +22,14 @@ app.get("/", function(req, res) {
 });
 app.get("/contact", function(req, res) {
     res.render("contact");
-})
+});
 
+app.post("/contact"), function(req, res, next) {
+    console.log("Contact form posted");
+    console.log("req.body");
+    console.log("req.body.fullname");
+    console.log("req.body.email");
+}
 
 
 
