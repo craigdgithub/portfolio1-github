@@ -64,6 +64,8 @@ app.post("/contact", function(req, res, next) {
 
 
 
-var port = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8080;
+
+app.set("port, PORT");
 app.listen(port);
 console.log("Express started. Listening on port %s", port);
