@@ -1,11 +1,11 @@
-
 require('dotenv').config();
+const nodemailer = require("nodemailer");
 var express = require("express");
 var app = express();
 var exphbs = require("express-handlebars");
 var path = require("path");
 var bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -32,7 +32,7 @@ let transporter = nodemailer.createTransport ({
     service:"gmail",
     auth: {
         user: process.env.EMAIL,
-        password: process.env.PASSWORD
+        pass: process.env.PASSWORD
     }
 });
 
