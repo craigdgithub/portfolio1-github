@@ -17,7 +17,11 @@ app.get("/", function(req, res) {
     res.render("home.hbs");
 });
 
-
+app.get("/contact", function(req, res) {
+    res.render("contact", {
+        submitted: "no"
+    });
+});
 
 
 var port = process.env.PORT || 8080;

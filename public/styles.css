@@ -237,3 +237,96 @@ a {
 .grey-link:hover {
     color: #89dcd9;
 }
+.contact-container {
+    width: 60%;
+    margin: auto;
+    color: #36cdd6;
+}
+
+.contact-title {
+    margin-top: 180px;
+    margin-bottom: 18px;
+    font-family: brandonBold;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 4.5px;
+    color: #89dcd9;
+}
+
+.contact-form {
+    font-family: fontLight;
+    font-size: 17px;
+}
+
+.contact-label {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 18px;
+}
+
+input[type=text], select {
+    width: 93%;
+    font-size: 17px;
+    font-family: fontLight;
+    background-color: #f5f5f5;
+    padding: 22px 14px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+input[type=submit] {
+    width: 100%;
+    font-size: 17px;
+    font-family: fontLight;
+    padding: 22px 14px;
+    margin: 10px 0px;
+    margin-bottom: 110px;
+    background-color: #5fd2d9;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #f7f7f7;
+    color: #444444;
+}
+
+input:focus, textarea:focus {
+    outline:none;
+}
+
+#contact-thankyou {
+    display: none;
+    width: 70%;
+    padding-bottom: 190px;
+    padding-top: 8px;
+    padding-bottom: 100px;
+    color: #89dcd9;
+    font-family: fontLight;
+    font-size: 27px;
+    letter-spacing: 0.4px;
+    line-height: 1.6;
+}
+
+#note {
+    height: 250px;
+    line-height: 1.0;
+    width: 93%;
+    font-size: 17px;
+    font-family: fontLight;
+    background-color: #f5f5f5;
+    padding: 22px 14px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+#submitted {
+    display: none;
+}
